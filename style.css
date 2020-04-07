@@ -1,0 +1,207 @@
+* {box-sizing: border-box;
+  color: black;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+  font: 1.2em Helvetica, arial, sans-serif;
+}
+
+.wrapper > * {
+  border: 2px solid whitesmoke;
+  background-color: teal ;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  border-bottom: 1px solid whitesmoke;
+  padding: 5px;
+}
+
+.main-head {
+  grid-area: header;
+  font-size: 400%;
+  padding: 20px;
+  color: whitesmoke;
+}
+.content {
+  grid-area: content;
+}
+.main-nav {
+  grid-area: nav;
+}
+
+.main-footer {
+  grid-area: footer;
+  color: whitesmoke;
+}
+.wrapper {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas: 
+    "header"
+    "nav"
+    "content"
+    "footer";
+}
+@media (min-width: 500px) {
+  .wrapper {
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: 
+      "header header"
+      "nav content"
+      "nav content"
+      "footer footer";
+  }
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 700px) {
+  .wrapper {
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas: 
+      "header header"
+      "nav    content"
+      "nav    content"
+      "footer footer"
+   }
+   nav ul {
+     flex-direction: column;
+   }
+}
+
+h1 {
+  padding: 0px;
+  margin: 0px;
+  color: whitesmoke;
+}
+
+h3 {
+  padding: 0px;
+  margin: 0px;
+  color: whitesmoke;
+  display: inline-block;
+}
+
+#colo {
+  color: teal;
+}
+
+
+.myButton {
+	background:linear-gradient(to bottom, teal 20%, teal 100%);
+	background-color:teal;
+	border-radius:8px;
+	display:inline-block;
+	color:#ffffff;
+	font-size:20px;
+	font-weight:bold;
+	padding:13px 32px;
+	text-decoration:none;
+  text-shadow:0px 1px 0px cadetblue;
+  width: 100%;
+  text-align: center;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, teal 5%, cadetblue 100%);
+	background-color:teal;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+.todoWindow, .projectWindow {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 20%;
+  margin-top: 5em;
+  border: 4px outset white;
+  color: whitesmoke;
+}
+
+.projects {
+  color: whitesmoke;
+  text-align: center;
+}
+
+#defProject {
+  color: whitesmoke;
+  text-align: center;
+}
+
+input[type=text] {
+  padding:5px; 
+  border:0 none;
+  cursor:pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; 
+  color: teal;
+  font-size: 80%;
+}
+
+input[type=text]:focus {
+  border-color:#333;
+}
+
+input[type=submit] {
+  padding:5px 15px; 
+  background:whitesmoke;
+  color: teal; 
+  font-size: 120%;
+  border:0 none;
+  cursor:pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; 
+}
+
+.content{
+  color: whitesmoke;
+  font-size: 110%;
+  padding: 10px;
+}
+
+select{
+  padding:5px 15px; 
+  background:whitesmoke;
+  color: teal; 
+  font-size: 120%;
+  border:0 none;
+  cursor:pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; 
+}
+option{
+  color: teal;
+}
+
+#dueDate{
+  padding:5px 15px; 
+  background:whitesmoke;
+  color: teal; 
+  font-size: 80%;
+  border:0 none;
+  cursor:pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; 
+}
+
+
+#checkbox {
+  height: 18px;
+  width: 18px;
+  background-color: whitesmoke;
+}
